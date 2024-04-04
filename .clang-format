@@ -1,0 +1,15 @@
+---
+BasedOnStyle: Google
+---
+Language: Cpp
+# 访问修饰符偏移量
+AccessModifierOffset: -2
+# 缩进宽度
+IndentWidth: 4
+
+# 控制指针与引用的对齐方式
+DerivePointerAlignment: false
+PointerAlignment: Left
+
+# 最大列宽
+ColumnLimit: 120
