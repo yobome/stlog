@@ -19,6 +19,11 @@ class Logger {
   public:
     static void Init(const std::filesystem::path& log_dir, const std::string& app_name,
                      const std::string& log_level = "DEBUG", const int32_t date = GetCurrentDate()) {
+        // 创建日志目录 
+        if (!std::filesystem::exists(log_dir)) {
+            std::filesystem::create_directories(log_dir);
+        }
+
         // 设置日志文件路径
         char buffer[256] = {0};
         sprintf(buffer, "%s/%s_%d.log", log_dir.c_str(), app_name.c_str(), date);
